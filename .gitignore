@@ -1,2 +1,7 @@
+*.pdb
+*.suo
+*.user
 bin
-pkg
+obj
+
+log
