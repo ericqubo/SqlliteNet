@@ -115,6 +115,10 @@ namespace SqlliteNetMallcoo
 #else
                 var ignore = p.GetCustomAttributes(typeof(IgnoreAttribute), true).Count() > 0;
 #endif
+                if(entityConfig.IgnoreList.Contains(p.Name))
+                {
+                    ignore = true;
+                }
                 if (p.CanWrite && !ignore)
                 {
                     if (entityConfig.PK == p.Name )

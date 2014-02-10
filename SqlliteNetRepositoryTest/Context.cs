@@ -23,7 +23,7 @@ namespace SqlliteNetRepositoryTest
 
         public override void OnModelCreating(List<SqlliteNetMallcoo.EntityTypeConfigration> EntityConfigrationList)
         {
-            EntityConfigrationList.Add(new SqlliteNetMallcoo.EntityTypeConfigration(typeof(People).FullName).HasKey("id").IsAutoPKInCrease(true));
+            EntityConfigrationList.Add(new SqlliteNetMallcoo.EntityTypeConfigration(typeof(People).FullName).HasKey("id").IsAutoPKInCrease(true).Ignore("age").Ignore("address"));
             EntityConfigrationList.Add(new SqlliteNetMallcoo.EntityTypeConfigration(typeof(School).FullName).HasKey("id").IsAutoPKInCrease(true));
         }
         public override void BatchCreateTables(List<Type> EntityList)
