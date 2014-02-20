@@ -10,6 +10,6 @@ namespace SqlliteNetRepository
     {
         // Methods
         //DbSet<TEntity> GetDbSet();
-        IQueryable<TEntity> GetWithDbSetSql(string query, params object[] parameters);
+        List<TEntity> GetWithDbSetSql(string query, params object[] parameters);
     }
 }
