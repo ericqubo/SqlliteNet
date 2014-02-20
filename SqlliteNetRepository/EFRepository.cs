@@ -50,17 +50,17 @@ namespace SqlliteNetRepository
         {
             return dbconn.Table<TEntity>().Where(predicate).FirstOrDefault();
         }
-        public List<TEntity> GetAll()
+        public TableQuery<TEntity> GetAll()
         {
-            return dbconn.Table<TEntity>().ToList();
+            return dbconn.Table<TEntity>();
         }
-        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter)
+        public TableQuery<TEntity> GetAll(Expression<Func<TEntity, bool>> filter)
         {
-            return dbconn.Table<TEntity>().Where(filter).AsQueryable();
+            return dbconn.Table<TEntity>().Where(filter);
         }
-        public IQueryable<TEntity> GetWithDbSetSql(string query, params object[] parameters)
+        public List<TEntity> GetWithDbSetSql(string query, params object[] parameters)
         {
-            return dbconn.Query<TEntity>(query, parameters).AsQueryable<TEntity>();
+            return dbconn.Query<TEntity>(query, parameters);
         }
 
         public int Insert(TEntity entity)
