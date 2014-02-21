@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SqlliteNetRepositoryTest.Model;
+using SqlliteNetMallcoo;
 
 namespace SqlliteNetRepositoryTest
 {
@@ -18,6 +20,11 @@ namespace SqlliteNetRepositoryTest
                     name = "xiaoming"
                 };
                 work.peopleRepository().Insert(p);
+                work.peopleRepository().Get(t => t.name == "1");
+                work.peopleRepository().GetAll(t => t.name == "1").OrderByDescending(t => t.name).ToList();
+                
+               
+               
             }
 
             using (UnitOfWork work = new UnitOfWork())

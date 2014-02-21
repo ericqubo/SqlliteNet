@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SqlliteNetMallcoo;
 
 namespace SqlliteNetRepositoryTest
 {
@@ -17,6 +18,7 @@ namespace SqlliteNetRepositoryTest
         public PeopleRepository(Context context)
             : base(context)
         {
+           
         }
     }
 }
