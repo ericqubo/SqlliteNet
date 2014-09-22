@@ -8,9 +8,9 @@ namespace SqlliteNetMallcoo
 {
     public class DbModelBuilder
     {
-        private static List<EntityTypeConfigration> _EntityConfigrationList = null;
-        private static List<Type> _EntityList = null;
-        private static List<Type> _hasExistEntity = null;
+        private  List<EntityTypeConfigration> _EntityConfigrationList = null;
+        private  List<Type> _EntityList = null;
+        private  List<Type> _hasExistEntity = null;
         public DbModelBuilder()
         {
             if (EntityConfigrationList == null)
